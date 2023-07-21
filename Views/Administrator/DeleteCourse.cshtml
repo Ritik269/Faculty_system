@@ -1,0 +1,28 @@
+﻿@model FacultyInformationSystem.Models.Course
+
+@{
+    ViewData["Title"] = "DeleteCourse";
+}
+<style>
+    body {
+        background: darkgrey;
+    }
+</style>
+<h1>DeleteCourse</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DeleteCourse">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <b><label asp-for="CourseId" class="control-label"></label></b>
+                <input asp-for="CourseId" required class="form-control" autocomplete="off" />
+                <span asp-validation-for="CourseId" class="text-danger"></span>
+            </div>
+            <div class="form-group" style=" padding-bottom: 15px;">
+                <input type="submit" value="Delete Course" class="btn btn-primary" onclick="return confirm('Please, Confirm Deletion of Course!')" style="background-color: black; color: white;" />
+            </div>
+        </form>
+    </div>
+</div>
+

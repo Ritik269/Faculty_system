@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Administrator Index";
+}
+
+<style>
+    h1 {
+        color: white;
+    }
+
+    .buttons {
+        font-size: 25px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    body {
+        background-image: url('https://fisstorage1.blob.core.windows.net/fis123/Fisimage.jpg');
+        background-repeat: no-repeat;
+    }
+</style>
+<h1>Welcome Administrator!</h1>
+<br />
+<br />
+<div class="buttons">
+    <div class="container1">
+        <a asp-action="CreateFaculty" asp-controller="Administrator" class="btn-outline-info">Add Faculty</a><br /><br />
+        <a asp-action="CreateDepartment" asp-controller="Administrator" class="btn-outline-info">Add Department</a><br /><br />
+        <a asp-action="CreateDesignation" asp-controller="Administrator" class="btn-outline-info">Add Designation</a><br /><br />
+        <a asp-action="CreateGrants" asp-controller="Administrator" class="btn-outline-info">Add Grants</a><br /><br />
+    </div>
+    <div class="container2">
+        <a asp-action="CreateSubject" asp-controller="Administrator" class="btn-outline-info">Add Subject</a><br /><br />
+        <a asp-action="CreateCourse" asp-controller="Administrator" class="btn-outline-info">Add Course</a><br /><br />
+        <a asp-action="UpdateCourse" asp-controller="Administrator" class="btn-outline-info">Update Course</a><br /><br />
+        <a asp-action="UpdateSubject" asp-controller="Administrator" class="btn-outline-info">Update Subject</a><br /><br />
+    </div>
+    <div class="container3">
+        <a asp-action="DeleteCourse" asp-controller="Administrator" class="btn-outline-info">Delete Course</a><br /><br />
+        <a asp-action="DeleteSubject" asp-controller="Administrator" class="btn-outline-info">Delete Subject</a><br /><br />
+    </div>
+</div>

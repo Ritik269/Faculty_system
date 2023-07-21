@@ -1,0 +1,44 @@
+﻿@model FacultyInformationSystem.Models.Grant
+
+@{
+    ViewData["Title"] = "CreateGrants";
+}
+<style>
+    body {
+        background: darkgrey;
+    }
+</style>
+<h1>CreateGrants</h1>
+
+<h4>Grant</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateGrants">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="GrantId" class="control-label"></label>
+                <input asp-for="GrantId" required class="form-control" />
+                <span asp-validation-for="GrantId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FacultyId" class="control-label"></label>
+                <input asp-for="FacultyId" required class="form-control" />
+                <span asp-validation-for="FacultyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GrantTitle" class="control-label"></label>
+                <input asp-for="GrantTitle" required class="form-control" />
+                <span asp-validation-for="GrantTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GrantDescription" class="control-label"></label>
+                <input asp-for="GrantDescription" required class="form-control" />
+                <span asp-validation-for="GrantDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

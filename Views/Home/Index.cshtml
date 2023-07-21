@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Index";
+}
+
+<h1>Welcome User!</h1><br /><br />
+<style>
+    body {
+        background-image: url('https://fisstorage1.blob.core.windows.net/fis123/Fisimage.jpg');
+        background-repeat: no-repeat;
+    }
+    h1 {
+        color: white;
+    }
+    .box{
+        font-size:22px;
+    }
+    
+</style>
+  
+<div class="box">
+    <a asp-action="ViewDepartments" asp-controller="Home" class="btn-outline-info">View Departments</a><br /><br />
+    <a asp-action="ViewCourses" asp-controller="Home" class="btn-outline-info">View Courses</a><br /><br />
+    <a asp-action="ViewSubjects" asp-controller="Home" class="btn-outline-info">View Subjects</a><br /><br />
+    <a asp-action="ViewPublications" asp-controller="Home" class="btn-outline-info">View Publications</a>
+</div>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<FacultyInformationSystem.Models.Publication>
+
+@{
+    ViewData["Title"] = "ViewPublications";
+}
+<style>
+    body {
+        background: darkgrey;
+    }
+</style>
+<h1>ViewPublications</h1>
+
+
+@foreach (var item in Model) {
+    <br /><br />
+          <tr>
+              <td>
+                  @Html.DisplayFor(modelItem => item.PublicationTiltle)
+              </td>
+              <td>
+                  @Html.DisplayFor(modelItem => item.ArticleName)
+              </td>
+              <td>
+                  @Html.DisplayFor(modelItem => item.PublisherName)
+              </td>
+              <td>
+                  @Html.DisplayFor(modelItem => item.PublicationLocation)
+              </td>
+              <td>
+                  @Html.DisplayFor(modelItem => item.CitationDate)
+              </td>
+              <td>
+                  @Html.DisplayFor(modelItem => item.Faculty.Address)
+              </td>
+
+              <br />
+              <br />
+          </tr>
+}

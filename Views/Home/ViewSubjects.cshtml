@@ -1,0 +1,25 @@
+﻿@model IEnumerable<FacultyInformationSystem.Models.Subject>
+
+@{
+    ViewData["Title"] = "ViewSubjects";
+}
+<style>
+    body {
+        background: darkgrey;
+    }
+</style>
+<h1>ViewSubjects</h1>
+
+@foreach (var item in Model) 
+{
+    <br /><br />
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dept.DeptName)
+            </td>          
+        </tr>
+}
+    

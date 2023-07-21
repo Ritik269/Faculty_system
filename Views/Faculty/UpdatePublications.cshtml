@@ -1,0 +1,58 @@
+﻿@model FacultyInformationSystem.Models.Publication
+
+@{
+    ViewData["Title"] = "UpdatePublications";
+}
+<style>
+    body {
+        background: darkgrey;
+    }
+</style>
+
+<h1>UpdatePublications</h1>
+
+<h4>Publication</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdatePublications">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <b><label asp-for="PublicationId" class="control-label"></label></b>
+                <input asp-for="PublicationId" required class="form-control" autocomplete="off" />
+                <span asp-validation-for="PublicationId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <b><label asp-for="PublicationTiltle" class="control-label"></label></b>
+                <input asp-for="PublicationTiltle" required class="form-control" autocomplete="off" />
+                <span asp-validation-for="PublicationTiltle" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <b><label asp-for="ArticleName" class="control-label"></label></b>
+                <input asp-for="ArticleName" required class="form-control" autocomplete="off" />
+                <span asp-validation-for="ArticleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <b><label asp-for="PublisherName" class="control-label"></label></b>
+                <input asp-for="PublisherName" required class="form-control" autocomplete="off" />
+                <span asp-validation-for="PublisherName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <b><label asp-for="PublicationLocation" class="control-label"></label></b>
+                <input asp-for="PublicationLocation" required class="form-control" autocomplete="off" />
+                <span asp-validation-for="PublicationLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <b><label asp-for="CitationDate" class="control-label"></label></b>
+                <input asp-for="CitationDate" required class="form-control" autocomplete="off" />
+                <span asp-validation-for="CitationDate" class="text-danger"></span>
+            </div>
+          
+            <div class="form-group" style=" padding-bottom: 15px;">
+                <input type="submit" value="Update Publications" class="btn btn-primary" onclick="return confirm('Please, Confirm Updating Publications!.')" style="background-color: black; color: white;" />
+            </div>
+        </form>
+    </div>
+</div>

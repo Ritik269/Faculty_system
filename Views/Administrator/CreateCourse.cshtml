@@ -1,0 +1,46 @@
+﻿@model FacultyInformationSystem.Models.Course
+
+@{
+    ViewData["Title"] = "CreateCourse";
+}
+<style>
+    body {
+        background: darkgrey;
+    }
+</style>
+<h1>CreateCourse</h1>
+
+<h4>Course</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateCourse">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CourseId" class="control-label"></label>
+                <input asp-for="CourseId" required class="form-control" />
+                <span asp-validation-for="CourseId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseName" class="control-label"></label>
+                <input asp-for="CourseName" required class="form-control" />
+                <span asp-validation-for="CourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseCredits" class="control-label"></label>
+                <input asp-for="CourseCredits" required class="form-control" />
+                <span asp-validation-for="CourseCredits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptId" class="control-label"></label>
+                <input asp-for="DeptId" required class="form-control" />
+                <span asp-validation-for="DeptId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
